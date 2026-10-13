@@ -1,0 +1,337 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#123b5d"><title>TECCHNEX · Gestión SST</title><link rel="stylesheet" href="styles.css"></head><body><header class="top"><button class="brand brand-button" type="button" data-go="dashboard" aria-label="Abrir tablero principal"><div class="mark">CH</div><div><b>TECCHNEX</b><small>DE LA NECESIDAD A LA SOLUCIÓN</small></div></button><span class="badge">GESTIÓN SST · PROTOTIPO</span></header><main><section id="home" class="view active"><div class="hero"><div><p>GESTIÓN SST · BLOQUE 01</p><h1>Capturar en campo. Organizar sin regresar a la oficina.</h1><div class="lead">Base funcional para evolucionar la inspección HSEQ actual hacia una solución SST modular. La metodología de valoración queda abierta para parametrización posterior.</div><div class="actions"><button data-go="new" class="primary">+ Nueva evaluación</button><button data-go="library">Ver estructura SST</button><button data-go="model">Ver modelo de información</button></div></div><div class="hero-card latest-panel" id="latestPanel">
+  <div class="latest-head">
+    <div>
+      <p>ESTADO DE LA EVALUACIÓN</p>
+      <h2 id="latestTitle">Sin evaluaciones guardadas</h2>
+    </div>
+    <span id="latestBadge" class="status-badge neutral">Pendiente</span>
+  </div>
+
+  <div id="latestEmpty" class="latest-empty">
+    Crea tu primera evaluación para comenzar a ver el estado aquí.
+  </div>
+
+  <div id="latestData" class="latest-data" hidden>
+    <div><small>Cliente</small><strong id="latestClient">—</strong></div>
+    <div><small>Sede</small><strong id="latestSite">—</strong></div>
+    <div><small>Aspectos</small><strong id="latestAspects">0/50</strong></div>
+    <div><small>Hallazgos</small><strong id="latestFindings">0</strong></div>
+    <div><small>Fotografías</small><strong id="latestPhotos">0</strong></div>
+    <div><small>Actualizado</small><strong id="latestUpdated">—</strong></div>
+  </div>
+
+  <div id="latestActions" class="latest-actions" hidden>
+    <button class="primary" id="latestOpen">Abrir evaluación</button>
+    <button id="latestRecords">Ver registros</button>
+  </div>
+</div></div><div class="metrics"><div class="metric-card interactive" role="button" aria-label="Abrir registros de evaluaciones" tabindex="0" data-metric="evaluations" data-go="listView"><div class="metric-top"><span class="metric-icon">▤</span><small>Evaluaciones</small></div><b id="mEval">0</b><span class="metric-action">Ver registros <i>→</i></span></div><div class="metric-card interactive" role="button" aria-label="Explorar los 50 aspectos del formato" tabindex="0" data-metric="aspects" data-go="library"><div class="metric-top"><span class="metric-icon">✓</span><small>Aspectos</small></div><b>50</b><span class="metric-action">Explorar biblioteca <i>→</i></span></div><div class="metric-card interactive" role="button" aria-label="Explorar categorías del formato" tabindex="0" data-metric="categories" data-go="library"><div class="metric-top"><span class="metric-icon">▦</span><small>Categorías</small></div><b id="mCat">0</b><span class="metric-action">Explorar categorías <i>→</i></span></div><div class="metric-card interactive" role="button" aria-label="Abrir registros de evidencias fotográficas" tabindex="0" data-metric="photos" data-go="evidenceView"><div class="metric-top"><span class="metric-icon">▧</span><small>Fotografías</small></div><b id="mPhoto">0</b><span class="metric-action">Abrir evidencias <i>→</i></span></div></div><div class="cols"><article class="interactive info-card" tabindex="0" data-info-card="core"><div class="info-title"><h2>Núcleo común</h2><span class="card-link">Ver detalle <i>+</i></span></div><div class="chips">
+  <span>Clientes</span>
+  <span>Sedes</span>
+  <span>Áreas</span>
+  <button type="button" class="core-chip hallazgos-chip" id="openHallazgos">Hallazgos →</button>
+  <span>Evidencias</span>
+  <span>Fotografías</span>
+  <button type="button" class="core-chip seguimiento-chip" id="openSeguimiento">Seguimiento →</button>
+  <button type="button" class="core-chip roles-chip" id="openRoles">Roles y flujo →</button>
+  <span>Informes</span>
+  <span>Respaldo</span>
+</div><div class="info-reveal"><p>Componentes que deben permanecer compartidos con Inspecciones y reutilizarse antes de construir algo nuevo.</p></div></article><article class="interactive info-card" tabindex="0" data-info-card="pending"><div class="info-title"><h2>Pendiente de confirmar</h2><span class="card-link">Ver detalle <i>+</i></span></div><ul><li>Metodología de valoración.</li><li>Criterios de priorización.</li><li>Controles y seguimiento SST.</li><li>Informe definitivo.</li></ul><div class="info-reveal"><p>Estas decisiones permanecen abiertas hasta recibir y validar la información del área SST.</p></div></article></div></section>
+<section id="newSetupView" class="view">
+  <div class="head">
+    <div>
+      <p>NUEVA EVALUACIÓN</p>
+      <h1>Iniciar evaluación SST</h1>
+      <span>Completa los datos básicos antes de comenzar la captura en campo.</span>
+    </div>
+    <button data-go="dashboard">← Tablero</button>
+  </div>
+
+  <div class="setup-card">
+    <div class="setup-grid">
+      <label>Cliente
+        <input id="setupCliente" placeholder="Nombre de la empresa o cliente">
+      </label>
+      <label>Sede / centro de trabajo
+        <input id="setupSede" placeholder="Sede o centro de trabajo">
+      </label>
+      <label>Lugar / área
+        <input id="setupLugar" placeholder="Lugar o área a inspeccionar">
+      </label>
+      <label>Inspector / responsable
+        <input id="setupInspector" placeholder="Nombre del responsable">
+      </label>
+      <label>Fecha
+        <input id="setupFecha" type="date">
+      </label>
+      <label>Tipo de evaluación
+        <select id="setupTipo">
+          <option value="Inspección HSEQ general" selected>Inspección HSEQ general</option>
+          <option value="Evaluación SST">Evaluación SST</option>
+          <option value="Seguimiento SST">Seguimiento SST</option>
+          <option value="Otro">Otro</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="setup-note">
+      <strong>Una decisión pendiente</strong>
+      <span>El tipo de evaluación se guarda como contexto. La metodología de valoración SST todavía queda abierta para incorporarla cuando el área la confirme.</span>
+    </div>
+
+    <div class="setup-actions">
+      <button type="button" id="setupCancel">Cancelar</button>
+      <button type="button" id="setupContinue" class="primary">Crear y continuar →</button>
+    </div>
+  </div>
+</section>
+
+<section class="context-bar" id="currentContextBar">
+  <div class="context-title">
+    <span>INSPECCIÓN HSEQ GENERAL</span>
+    <strong id="contextClient">—</strong>
+  </div>
+  <div class="context-items">
+    <div><small>Sede</small><b id="contextSite">—</b></div>
+    <div><small>Área / lugar</small><b id="contextPlace">—</b></div>
+    <div><small>Inspector</small><b id="contextInspector">—</b></div>
+    <div><small>Fecha</small><b id="contextDate">—</b></div>
+  </div>
+  <button type="button" id="editContext">Editar contexto</button>
+</section>
+<section id="new" class="view"><div class="head"><div><p>CAM-SST-01A</p><h1>Inspección HSEQ general</h1><span>Guardado automático en este dispositivo. <b id="saveStatus">Listo</b></span></div><button data-go="dashboard">← Tablero</button></div>
+<div class="field-toolbar" id="fieldToolbar">
+  <div class="field-progress">
+    <div class="field-progress-top">
+      <strong>CAPTURA EN CAMPO</strong>
+      <span id="fieldProgressText">0/50 aspectos</span>
+    </div>
+    <div class="field-progress-track"><div id="fieldProgressBar" class="field-progress-bar"></div></div>
+  </div>
+  <div class="field-tools">
+    <label class="compact-check">
+      <input id="pendingOnly" type="checkbox">
+      <span>Solo pendientes</span>
+    </label>
+    <button type="button" id="nextPending" class="field-btn primary">Siguiente pendiente →</button>
+  </div>
+</div>
+<div class="steps"><button data-step="1" class="active">1 Contexto</button><button data-step="2">2 Evaluación</button><button data-step="3">3 Resumen</button></div><form id="form"><div class="panel active" data-panel="1"><div class="card"><h2>¿Dónde estamos?</h2><div class="form"><label>Cliente<input name="cliente" required></label><label>Sede / centro<input name="sede"></label><label>Lugar / área<input name="lugar"></label><label>Inspector<input name="inspector"></label><label>Director / responsable<input name="director"></label><label>Servicio / actividad<input name="servicio"></label><label>Modalidad / jornada<input name="modalidad"></label><label>N.º expuestos<input name="expuestos" type="number" min="0"></label><label>Fecha<input name="fecha" type="date"></label><label>Observación inicial<textarea name="obs" rows="3"></textarea></label></div></div><div class="nav"><span></span><button type="button" data-next="2" class="primary">Continuar →</button></div></div><div class="panel" data-panel="2"><div class="toolbar"><div><p>ASPECTOS EVALUADOS</p><h2>Captura en campo</h2></div><div><input id="search" placeholder="Buscar aspecto o categoría"><select id="cat"></select></div></div>
+<div class="aspect-toolbar" id="aspectToolbar">
+  <div>
+    <p>CAPTURA DE ASPECTOS</p>
+    <strong>Evalúa un aspecto a la vez</strong>
+    <span id="visibleAspectCount">50 aspectos visibles</span>
+  </div>
+  <div class="aspect-legend">
+    <span><i class="dot pending"></i>Pendiente</span>
+    <span><i class="dot done"></i>Capturado</span>
+  </div>
+</div>
+<div id="list"></div><div class="nav"><button type="button" data-prev="1">← Atrás</button><button type="button" data-next="3" class="primary">Continuar →</button></div></div><div class="panel" data-panel="3"><div class="cols"><article class="card"><p>RESULTADO PRELIMINAR</p><h2 id="titleSummary">Evaluación</h2><div id="summary" class="summary"></div></article><article class="card"><p>OBSERVACIÓN GENERAL</p><textarea id="general" rows="8"></textarea></article></div><div class="warning"><b>Metodología SST pendiente</b><span>Esta versión captura y organiza información. No calcula todavía niveles definitivos de riesgo ni declara conformidad normativa.</span></div><div class="nav"><button type="button" data-prev="2">← Atrás</button><div><button type="button" id="save" class="primary">Guardar evaluación</button><button type="button" id="generateReport" class="report-btn">Generar informe Word</button><button type="button" data-go="home">Cerrar</button></div></div></div></form></section><section id="listView" class="view">
+  <div class="head">
+    <div>
+      <p>REGISTROS LOCALES</p>
+      <h1>Evaluaciones guardadas</h1>
+      <span>Consulta y retoma las evaluaciones almacenadas en este dispositivo.</span>
+    </div>
+    <div class="head-actions">
+      <button data-go="dashboard">← Tablero</button>
+      <button data-go="new" class="primary">+ Nueva</button>
+    </div>
+  </div>
+
+  <div class="records-summary">
+    <article class="record-stat"><small>Evaluaciones</small><b id="recordsTotal">0</b></article>
+    <article class="record-stat"><small>Con hallazgos</small><b id="recordsFindings">0</b></article>
+    <article class="record-stat"><small>Con gestión SST</small><b id="recordsManaged">0</b></article>
+    <article class="record-stat"><small>Con fotografías</small><b id="recordsPhotos">0</b></article>
+  </div>
+
+  <div class="records-toolbar">
+    <input id="recordsSearch" placeholder="Buscar por cliente, sede, lugar o inspector">
+    <select id="recordsFilter">
+      <option value="">Todos los registros</option>
+      <option value="findings">Con hallazgos</option>
+      <option value="managed">Con gestión SST</option>
+      <option value="photos">Con fotografías</option>
+    </select>
+  </div>
+
+  <div id="saved"></div>
+</section>
+<section id="evidenceView" class="view">
+  <div class="head">
+    <div>
+      <p>ARCHIVO LOCAL DE EVIDENCIAS</p>
+      <h1>Fotografías y evidencias</h1>
+      <span>Vista de consulta sobre las fotografías ya almacenadas por la evaluación.</span>
+    </div>
+    <button data-go="dashboard">← Tablero</button>
+  </div>
+
+  <div class="evidence-toolbar">
+    <div>
+      <strong id="evidenceCount">0 evidencias</strong>
+      <span id="evidenceHint">Las fotografías permanecen vinculadas al aspecto que las originó.</span>
+    </div>
+    <div class="evidence-filters">
+      <input id="evidenceSearch" placeholder="Buscar cliente, sede o aspecto">
+      <select id="evidenceCategory">
+        <option value="">Todas las categorías</option>
+      </select>
+    </div>
+  </div>
+
+  <div id="evidenceGrid" class="evidence-grid"></div>
+</section>
+<section id="model" class="view"><div class="head"><div><p>CAM-SST-02</p><h1>Modelo de información</h1><span>La estructura está preparada para crecer sin cambiar lo que ya funciona.</span></div><button data-go="dashboard">← Tablero</button></div><div id="modelCards" class="model-grid"></div><div class="warning"><b>Decisiones aún abiertas</b><span>La metodología de evaluación, valoración y priorización no está incorporada todavía. Solo definimos la estructura de información necesaria para recibirla cuando el área SST la confirme.</span></div><div class="card"><h2>Flujo del registro</h2><div class="flow"><span>Cliente</span><b>→</b><span>Sede</span><b>→</b><span>Área / actividad</span><b>→</b><span>Aspecto</span><b>→</b><span>Evidencia</span><b>→</b><span>Gestión SST</span><b>→</b><span>Acción</span><b>→</b><span>Seguimiento</span></div><p class="note">Un registro SST no reemplaza la inspección: agrega una capa de gestión sobre el dato capturado.</p></div></section>
+<section id="hallazgosView" class="view">
+  <div class="head">
+    <div>
+      <p>GESTIÓN DE HALLAZGOS</p>
+      <h1>Hallazgos registrados</h1>
+      <span>Consulta los hallazgos capturados durante las inspecciones HSEQ.</span>
+    </div>
+    <button data-go="dashboard">← Tablero</button>
+  </div>
+
+  <div class="findings-summary">
+    <article><small>Total</small><b id="findingsTotal">0</b></article>
+    <article><small>No conformes</small><b id="findingsNC">0</b></article>
+    <article><small>Con fotografías</small><b id="findingsPhotos">0</b></article>
+    <article><small>Inspecciones</small><b id="findingsInspections">0</b></article>
+  </div>
+
+  <div class="findings-toolbar">
+    <input id="findingsSearch" placeholder="Buscar cliente, sede, aspecto o hallazgo">
+    <select id="findingsFilter">
+      <option value="">Todos</option>
+      <option value="NC">No conformes</option>
+      <option value="photos">Con fotografías</option>
+    </select>
+  </div>
+
+  <div id="findingsList" class="findings-list"></div>
+</section>
+
+<section id="seguimientoView" class="view">
+  <div class="head">
+    <div>
+      <p>SEGUIMIENTO DE ACCIONES</p>
+      <h1>Seguimiento</h1>
+      <span>Consulta las acciones que ya estén registradas en las evaluaciones y su estado actual.</span>
+    </div>
+    <button data-go="dashboard">← Tablero</button>
+  </div>
+
+  <div class="follow-summary">
+    <article><small>Con acción</small><b id="followTotal">0</b></article>
+    <article><small>Pendientes</small><b id="followPending">0</b></article>
+    <article><small>En proceso</small><b id="followProgress">0</b></article>
+    <article><small>Completadas</small><b id="followDone">0</b></article>
+  </div>
+
+  <div class="follow-toolbar">
+    <input id="followSearch" placeholder="Buscar cliente, sede, acción o responsable">
+    <select id="followFilter">
+      <option value="">Todos los estados</option>
+    </select>
+  </div>
+
+  <div id="followList" class="follow-list"></div>
+</section>
+
+<section id="rolesView" class="view">
+  <div class="head">
+    <div>
+      <p>FLUJO DE TRABAJO</p>
+      <h1>Roles en la operación</h1>
+      <span>Vista de diseño para separar lo que ocurre en campo de lo que ocurre durante la gestión posterior.</span>
+    </div>
+    <button data-go="dashboard">← Tablero</button>
+  </div>
+
+  <div class="role-note">
+    <strong>Bloque provisional</strong>
+    <span>Esta vista describe funciones de trabajo. Todavía no crea usuarios ni permisos; esos elementos se definirán cuando el proceso del área esté confirmado.</span>
+  </div>
+
+  <div class="role-tabs" role="tablist">
+    <button class="role-tab active" type="button" data-role-tab="inspector">Inspector de campo</button>
+    <button class="role-tab" type="button" data-role-tab="manager">Responsable de gestión</button>
+  </div>
+
+  <section class="role-panel active" id="roleInspector">
+    <div class="role-hero">
+      <div>
+        <p>PERFIL DE CAMPO</p>
+        <h2>Capturar lo que ocurre</h2>
+        <span>El inspector concentra su trabajo en observar, evaluar, evidenciar y dejar la información lista para gestionar.</span>
+      </div>
+      <div class="role-flow">
+        <span>Contexto</span><i>→</i><span>Evaluación</span><i>→</i><span>Hallazgo</span><i>→</i><span>Evidencia</span>
+      </div>
+    </div>
+
+    <div class="role-grid">
+      <article><strong>1</strong><h3>Contexto</h3><p>Cliente, sede, área, responsable, servicio y fecha.</p></article>
+      <article><strong>2</strong><h3>Evaluar</h3><p>Revisar cada aspecto y registrar C, NC o NA.</p></article>
+      <article><strong>3</strong><h3>Evidenciar</h3><p>Describir el hallazgo y capturar fotografías desde el campo.</p></article>
+      <article><strong>4</strong><h3>Entregar información</h3><p>Dejar el registro listo para su gestión posterior.</p></article>
+    </div>
+
+    <div class="role-metrics" id="inspectorMetrics">
+      <div><small>Evaluaciones</small><b>0</b></div>
+      <div><small>Aspectos capturados</small><b>0</b></div>
+      <div><small>Hallazgos</small><b>0</b></div>
+      <div><small>Fotografías</small><b>0</b></div>
+    </div>
+  </section>
+
+  <section class="role-panel" id="roleManager" hidden>
+    <div class="role-hero manager">
+      <div>
+        <p>PERFIL DE GESTIÓN</p>
+        <h2>Convertir información en acciones</h2>
+        <span>El responsable revisa los hallazgos, asigna acciones y hace seguimiento hasta verificar el resultado.</span>
+      </div>
+      <div class="role-flow">
+        <span>Hallazgo</span><i>→</i><span>Acción</span><i>→</i><span>Seguimiento</span><i>→</i><span>Cierre</span>
+      </div>
+    </div>
+
+    <div class="role-grid">
+      <article><strong>1</strong><h3>Revisar</h3><p>Consultar hallazgos y evidencias provenientes del campo.</p></article>
+      <article><strong>2</strong><h3>Gestionar</h3><p>Definir acción, responsable, fecha y estado.</p></article>
+      <article><strong>3</strong><h3>Hacer seguimiento</h3><p>Registrar avance y resultado del seguimiento.</p></article>
+      <article><strong>4</strong><h3>Verificar</h3><p>Decidir cuándo una acción puede verificarse o cerrarse.</p></article>
+    </div>
+
+    <div class="role-metrics" id="managerMetrics">
+      <div><small>Hallazgos</small><b>0</b></div>
+      <div><small>Con acción</small><b>0</b></div>
+      <div><small>En proceso</small><b>0</b></div>
+      <div><small>En seguimiento</small><b>0</b></div>
+    </div>
+  </section>
+</section>
+<section id="library" class="view">
+  <div class="head">
+    <div>
+      <p>BIBLIOTECA INICIAL</p>
+      <h1>Categorías SST</h1>
+      <span>Selecciona una categoría para iniciar una evaluación enfocada en ese grupo de aspectos.</span>
+    </div>
+    <button data-go="dashboard">← Tablero</button>
+  </div>
+
+  <div class="library-toolbar">
+    <div>
+      <strong id="libraryTotal">0 categorías</strong>
+      <span id="libraryHint">50 aspectos cargados desde el formato actual.</span>
+    </div>
+    <input id="librarySearch" placeholder="Buscar categoría">
+  </div>
+
+  <div id="cats" class="catgrid"></div>
+</section></main><nav><button class="nav-dashboard" data-go="dashboard">⌂<small>Tablero</small></button><button data-go="new">＋<small>Nueva</small></button><button data-go="listView">▤<small>Registros</small></button><button data-go="library">▦<small>Biblioteca</small></button><button data-go="model">◇<small>Modelo</small></button></nav><script src="vendor/jszip.min.js"></script><script type="module" src="app.js"></script></body></html>

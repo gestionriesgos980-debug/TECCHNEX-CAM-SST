@@ -1,0 +1,932 @@
+:root{--navy:#123b5d;--cyan:#19a7c1;--border:#dfe6eb;--soft:#edf3f7;--text:#182531;--muted:#6d7b86}*{box-sizing:border-box}body{margin:0;background:#f4f7fa;color:#182531;font-family:"Century Gothic",Segoe UI,Arial,sans-serif}.top{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:12px 18px;background:#fff;border-bottom:1px solid #dfe6eb}.brand{display:flex;gap:10px;align-items:center}.mark{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#123b5d,#19b6cf);color:#fff;display:grid;place-items:center;font-weight:800}.brand b{display:block;color:#123b5d;letter-spacing:.08em}.brand small{display:block;color:#6d7b86;font-size:9px}.badge{color:#123b5d;font-size:12px;font-weight:700}main{max-width:1150px;margin:auto;padding:22px 16px 100px}.view{display:none}.view.active{display:block}h1{color:#123b5d;margin:5px 0 12px;font-size:clamp(28px,5vw,46px);line-height:1.05}h2{color:#123b5d}.hero{display:grid;grid-template-columns:1.7fr .8fr;gap:16px}.hero>div,.hero-card,.metrics>div,article,.card{background:#fff;border:1px solid #dfe6eb;border-radius:18px;box-shadow:0 8px 24px rgba(18,59,93,.06)}.hero>div,.hero-card{padding:24px}.hero p,.head p,.toolbar p,.card p{margin:0;color:#19a7c1;font-size:11px;font-weight:800;letter-spacing:.12em}.lead{color:#586874;line-height:1.6;max-width:720px}.actions{display:flex;gap:10px;margin-top:18px}.hero-card{display:flex;flex-direction:column;justify-content:center;background:linear-gradient(135deg,#123b5d,#176887);color:#fff}.hero-card span{opacity:.8;margin-top:6px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}.metrics>div{padding:18px}.metrics small{display:block;color:#6d7b86}.metrics b{display:block;color:#123b5d;font-size:30px;margin-top:10px}.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}.cols>article{padding:20px}.chips{line-height:2;color:#51606d}.head{display:flex;justify-content:space-between;gap:15px;align-items:flex-start;margin-bottom:14px}.head span{color:#6d7b86}.steps{display:flex;gap:8px;margin-bottom:14px}.steps button,.nav button,.toolbar button,nav button{border:1px solid #dfe6eb;background:#fff;border-radius:11px;padding:10px 13px;color:#123b5d;font-weight:800}.steps button.active,.primary{background:#123b5d!important;color:#fff!important;border-color:#123b5d!important}.panel{display:none}.panel.active{display:block}.card{padding:20px}.form{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;margin-top:15px}.form label,label{display:flex;flex-direction:column;gap:5px;color:#53616c;font-size:12px;font-weight:800}.form input,.form textarea,input,select,textarea{width:100%;border:1px solid #dfe6eb;border-radius:10px;padding:10px;background:#fff;color:#182531}.nav{display:flex;justify-content:space-between;gap:10px;margin-top:14px}.toolbar{display:flex;justify-content:space-between;gap:12px;align-items:end;margin-bottom:12px}.toolbar>div:last-child{display:flex;gap:8px}.aspect{background:#fff;border:1px solid #dfe6eb;border-radius:14px;padding:16px;margin-bottom:10px}.aspect h3{margin:4px 0;color:#123b5d}.tag{display:inline-block;background:#edf3f7;border-radius:999px;padding:5px 8px;font-size:10px;font-weight:800;color:#123b5d}.aspect q{color:#596873}.aspect-grid{display:grid;grid-template-columns:170px 1fr;gap:10px;margin-top:12px}.photos{margin-top:10px}.photos label{display:inline-flex;align-items:center;gap:5px;background:#edf7f8;color:#0b6571;border-radius:10px;padding:9px;cursor:pointer;margin-right:7px}.photos input{display:none}.thumbs{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}.thumb{position:relative;width:84px;height:84px;border-radius:9px;overflow:hidden;border:1px solid #dfe6eb;background:#eef2f4}.thumb img{width:100%;height:100%;object-fit:cover}.thumb button{position:absolute;right:3px;top:3px;width:24px;height:24px;border:0;border-radius:7px;background:rgba(0,0,0,.62);color:#fff;font-weight:800;padding:0;line-height:1}.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.summary div{padding:12px;background:#edf3f7;border-radius:10px}.summary b{display:block;font-size:22px;color:#123b5d}.summary small{color:#6d7b86}.warning{margin-top:14px;padding:14px;border-left:4px solid #d6a324;background:#fffdf3;border-radius:12px;display:flex;flex-direction:column;gap:5px}.saved{background:#fff;border:1px solid #dfe6eb;border-radius:14px;padding:15px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;gap:10px}.saved b{color:#123b5d}.saved small{color:#6d7b86;display:block}.catgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.cat{background:#fff;border:1px solid #dfe6eb;border-radius:14px;padding:18px}.cat h3{margin:0;color:#123b5d}.cat span{color:#6d7b86;font-size:12px}nav{position:fixed;bottom:0;left:0;right:0;z-index:10;background:rgba(255,255,255,.97);border-top:1px solid #dfe6eb;display:flex;justify-content:center;gap:4px;padding:7px}nav button{background:transparent;border:0;min-width:90px;font-size:22px}nav small{display:block;font-size:10px;color:#6d7b86}@media(max-width:800px){.hero,.cols{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr}.form,.aspect-grid,.catgrid{grid-template-columns:1fr}.toolbar{align-items:stretch;flex-direction:column}.toolbar>div:last-child{flex-direction:column}.badge{display:none}}
+.sst-management{margin:12px 0;border-top:1px solid var(--border);padding-top:10px}.sst-management summary{cursor:pointer;color:var(--navy);font-size:11px;font-weight:800;list-style:none}.sst-management summary::-webkit-details-marker{display:none}.management-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:10px;padding:12px;border:1px solid #d9e7ef;border-radius:12px;background:#f7fbfd}.management-grid label{font-size:10px}.management-grid input,.management-grid textarea,.management-grid select{width:100%}@media(max-width:700px){.management-grid{grid-template-columns:1fr}.nav button,.head button,.actions button{width:100%}.actions,.nav>div{flex-direction:column;align-items:stretch}.saved{align-items:stretch;flex-direction:column}.saved>div:last-child{display:flex;gap:7px}.saved>div:last-child button{flex:1}.steps button{flex:1}.steps{position:sticky;top:64px;z-index:4;background:#f4f7fa;padding:5px 0}.photos label{width:100%;justify-content:center}.thumb{width:76px;height:76px}}
+
+.model-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:16px 0}.model-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:18px}.model-card h3{margin:0 0 7px;color:var(--navy)}.model-card p{margin:0;color:var(--muted);font-size:12px;line-height:1.55}.model-card .field-list{margin:12px 0 0;padding-left:18px;color:#586774;font-size:12px;line-height:1.65}.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:14px}.flow span{padding:8px 11px;border-radius:999px;background:var(--soft);border:1px solid #d9e7ef;color:var(--navy);font-weight:800;font-size:11px}.flow b{color:var(--cyan)}.note{margin:15px 0 0;color:var(--muted);font-size:12px}.export-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}@media(max-width:900px){.model-grid{grid-template-columns:1fr 1fr}.flow{gap:6px}}@media(max-width:600px){.model-grid{grid-template-columns:1fr}.flow b{display:none}}
+
+/* Interacción de tarjetas — CAM-SST-02B · Ajuste visual por bloque */
+.interactive{cursor:pointer;position:relative;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background .18s ease}.interactive:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(18,59,93,.11);border-color:#b9d3df}.interactive:focus-visible{outline:3px solid rgba(25,167,193,.28);outline-offset:2px}
+.metric-card{min-height:142px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}.metric-card::after{content:'Abrir';position:absolute;right:14px;top:14px;border-radius:999px;padding:4px 8px;background:#edf7f8;color:#0b6571;font-size:9px;font-weight:800;opacity:0;transform:translateY(-3px);transition:.18s ease}.metric-card:hover::after,.metric-card:focus-visible::after,.metric-card.active::after{opacity:1;transform:none}.metric-card.active{border-color:var(--cyan);background:#fbfeff}.metric-top{display:flex;align-items:center;gap:9px}.metric-top small{font-weight:800;color:var(--muted)}.metric-icon{width:30px;height:30px;border-radius:10px;background:var(--soft);color:var(--navy);display:grid;place-items:center;font-weight:900}.metric-card b{font-size:32px;color:var(--navy);line-height:1}.metric-action{display:flex;align-items:center;justify-content:space-between;color:var(--cyan);font-size:10px;font-weight:800}.metric-action i{font-style:normal;font-size:14px;transition:transform .18s ease}.metric-card:hover .metric-action i,.metric-card.active .metric-action i{transform:translateX(3px)}
+.info-card .info-title{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.card-link{flex:none;border:1px solid #d9e7ef;background:#f7fbfd;color:var(--navy);border-radius:999px;padding:6px 8px;font-size:9px;font-weight:800}.info-card.active .card-link{background:#dff4f8;color:#0b6571}.info-card .info-reveal{display:grid;grid-template-rows:0fr;transition:grid-template-rows .22s ease;margin-top:0}.info-card .info-reveal p{overflow:hidden;margin:0;color:var(--muted);font-size:12px;line-height:1.55}.info-card.active .info-reveal{grid-template-rows:1fr;margin-top:12px;padding-top:12px;border-top:1px solid #e4edf1}
+.model-card{cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}.model-card:hover,.model-card.active{transform:translateY(-2px);box-shadow:0 12px 28px rgba(18,59,93,.1);border-color:#b9d3df}.model-card::after{content:'Abrir detalle';position:absolute;right:14px;top:14px;padding:5px 8px;border-radius:999px;background:var(--soft);color:var(--navy);font-size:9px;font-weight:800}.model-card.active::after{content:'Cerrar detalle';background:#dff4f8;color:#0b6571}.model-detail{display:grid;grid-template-rows:0fr;transition:grid-template-rows .22s ease}.model-detail>div{overflow:hidden}.model-card.active .model-detail{grid-template-rows:1fr;margin-top:12px}.model-card.active .model-detail>div{border-top:1px solid #e4edf1;padding-top:12px}.model-detail ul{margin:8px 0 0;padding-left:17px;color:var(--muted);font-size:11px;line-height:1.55}.cat.interactive:hover{transform:translateY(-2px)}.cat.active{border-color:var(--cyan);background:#fbfeff}.cat::after{content:'Usar en evaluación →';display:block;margin-top:10px;color:var(--cyan);font-size:10px;font-weight:800}
+@media(max-width:600px){.metric-card::after{opacity:1;transform:none}.metric-card b{font-size:28px}.card-link{padding:5px 7px}}
+
+
+/* CAM-SST-02C — Evidencias interactivas */
+.evidence-toolbar{display:flex;justify-content:space-between;align-items:end;gap:14px;background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px 16px;margin-bottom:14px}
+.evidence-toolbar strong{display:block;color:var(--navy);font-size:14px}
+.evidence-toolbar span{display:block;color:var(--muted);font-size:11px;margin-top:4px}
+.evidence-toolbar input{min-width:280px}
+.evidence-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.evidence-card{background:#fff;border:1px solid var(--border);border-radius:15px;overflow:hidden;box-shadow:0 7px 18px rgba(18,59,93,.06)}
+.evidence-image{display:block;width:100%;aspect-ratio:4/3;border:0;padding:0;background:#eef2f4;overflow:hidden;cursor:pointer}
+.evidence-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .2s ease}
+.evidence-image:hover img{transform:scale(1.025)}
+.evidence-meta{padding:12px}
+.evidence-meta strong{display:block;color:var(--navy);font-size:13px}
+.evidence-meta span{display:inline-block;margin-top:4px;background:var(--soft);border:1px solid #d9e7ef;border-radius:999px;padding:4px 7px;color:var(--navy);font-size:9px;font-weight:800}
+.evidence-meta small{display:block;margin-top:8px;color:var(--muted);font-size:10px;line-height:1.4}
+.empty-evidence{padding:30px;text-align:center;color:var(--muted)}
+.evidence-lightbox{position:fixed;inset:0;z-index:100;background:rgba(6,20,31,.84);display:none;place-items:center;padding:24px}
+.evidence-lightbox.open{display:grid}
+.lightbox-inner{position:relative;max-width:min(1000px,96vw);max-height:92vh;display:flex;flex-direction:column;align-items:center;gap:10px}
+.lightbox-inner img{max-width:100%;max-height:80vh;border-radius:14px;background:#fff;box-shadow:0 18px 50px rgba(0,0,0,.28)}
+.lightbox-close{position:absolute;right:-7px;top:-7px;width:36px;height:36px;border:0;border-radius:50%;background:#fff;color:var(--navy);font-size:24px;font-weight:900;cursor:pointer}
+.lightbox-title{color:#fff;font-weight:800;font-size:13px;text-align:center}
+@media(max-width:950px){.evidence-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:720px){.evidence-toolbar{flex-direction:column;align-items:stretch}.evidence-toolbar input{min-width:0}.evidence-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:430px){.evidence-grid{grid-template-columns:1fr}}
+
+
+/* CAM-SST-02D — Tablero explícito */
+.brand-button{appearance:none;border:0;background:transparent;padding:0;text-align:left;color:inherit;display:flex;align-items:center;gap:10px;cursor:pointer}
+.brand-button:focus-visible,.nav-dashboard:focus-visible{outline:3px solid rgba(25,182,207,.35);outline-offset:3px;border-radius:10px}
+.nav-dashboard{font-weight:900}
+
+
+/* CAM-SST-02E — Navegación estable */
+.head-actions{display:flex;gap:8px;align-items:center}
+.head-actions button{border:1px solid var(--border);background:#fff;color:var(--navy);border-radius:10px;padding:10px 12px;font-weight:800;cursor:pointer}
+@media(max-width:620px){.head-actions{width:100%}.head-actions button{flex:1}}
+
+
+/* CAM-SST-02G — conexiones del tablero */
+.metric-card{cursor:pointer}
+.metric-card:focus-visible{outline:3px solid rgba(25,182,207,.28);outline-offset:3px}
+.evidence-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px 16px;margin-bottom:14px}
+.evidence-toolbar strong{display:block;color:var(--navy);font-size:14px}
+.evidence-toolbar span{display:block;color:var(--muted);font-size:11px;margin-top:4px}
+.evidence-toolbar input{min-width:280px}
+.evidence-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.evidence-card{background:#fff;border:1px solid var(--border);border-radius:15px;overflow:hidden;box-shadow:0 7px 18px rgba(18,59,93,.06)}
+.evidence-image{display:block;width:100%;aspect-ratio:4/3;border:0;padding:0;background:#eef2f4;overflow:hidden;cursor:pointer}
+.evidence-image img{width:100%;height:100%;object-fit:cover;display:block}
+.evidence-meta{padding:12px}
+.evidence-meta strong{display:block;color:var(--navy);font-size:13px}
+.evidence-meta span{display:inline-block;margin-top:4px;background:var(--soft);border:1px solid #d9e7ef;border-radius:999px;padding:4px 7px;color:var(--navy);font-size:9px;font-weight:800}
+.evidence-meta small{display:block;margin-top:8px;color:var(--muted);font-size:10px}
+.empty-evidence{padding:30px;text-align:center;color:var(--muted)}
+.evidence-lightbox{position:fixed;inset:0;z-index:100;background:rgba(6,20,31,.84);display:none;place-items:center;padding:24px}
+.evidence-lightbox.open{display:grid}
+.lightbox-inner{position:relative;max-width:min(1000px,96vw);max-height:92vh;display:flex;flex-direction:column;align-items:center;gap:10px}
+.lightbox-inner img{max-width:100%;max-height:80vh;border-radius:14px;background:#fff}
+.lightbox-close{position:absolute;right:-7px;top:-7px;width:36px;height:36px;border:0;border-radius:50%;background:#fff;color:var(--navy);font-size:24px;font-weight:900}
+.lightbox-title{color:#fff;font-weight:800;font-size:13px}
+@media(max-width:900px){.evidence-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:650px){.evidence-toolbar{flex-direction:column;align-items:stretch}.evidence-toolbar input{min-width:0}.evidence-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:430px){.evidence-grid{grid-template-columns:1fr}}
+
+
+/* CAM-SST-03A — Registros funcionales */
+.records-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+.record-stat{background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px;box-shadow:0 6px 18px rgba(18,59,93,.05)}
+.record-stat small{display:block;color:var(--muted);font-size:10px;font-weight:800}
+.record-stat b{display:block;margin-top:5px;color:var(--navy);font-size:24px}
+.records-toolbar{display:flex;gap:10px;margin:0 0 14px}
+.records-toolbar input{flex:1}
+.records-toolbar select{width:220px}
+.record-card{position:relative;align-items:flex-start}
+.record-title{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.record-title b{color:var(--navy);font-size:15px}
+.record-title span{color:var(--muted);font-size:11px}
+.record-main>small{display:block;color:var(--muted);font-size:10px;margin-top:5px}
+.record-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+.record-tags span{background:var(--soft);border:1px solid #d9e7ef;color:var(--navy);border-radius:999px;padding:5px 8px;font-size:9px;font-weight:800}
+.record-actions{display:flex;gap:7px;flex-wrap:wrap}
+.record-actions button{border:1px solid var(--border);background:#fff;color:var(--navy);border-radius:9px;padding:8px 10px;font-size:11px;font-weight:800;cursor:pointer}
+.record-actions .record-open{background:var(--navy);color:#fff;border-color:var(--navy)}
+.record-actions .record-delete{color:#9e3434}
+.record-inline-detail{grid-column:1/-1;margin-top:2px;padding:12px;border-top:1px dashed var(--border);display:grid;grid-template-columns:repeat(2,1fr);gap:7px;color:#51616e;font-size:11px;line-height:1.4}
+.records-empty{text-align:center;color:var(--muted);padding:30px}
+@media(max-width:800px){.records-summary{grid-template-columns:repeat(2,1fr)}.records-toolbar{flex-direction:column}.records-toolbar select{width:100%}}
+@media(max-width:620px){.record-card{flex-direction:column}.record-actions{width:100%}.record-actions button{flex:1}.record-inline-detail{grid-template-columns:1fr}}
+
+
+/* CAM-SST-03B — Biblioteca funcional */
+.library-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px 16px;margin:16px 0}
+.library-toolbar strong{display:block;color:var(--navy);font-size:14px}
+.library-toolbar span{display:block;color:var(--muted);font-size:11px;margin-top:4px}
+.library-toolbar input{min-width:260px}
+.cat{display:flex;align-items:center;gap:12px;position:relative}
+.cat-icon{width:42px;height:42px;border-radius:12px;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:10px;font-weight:900;flex:0 0 auto}
+.cat-copy{min-width:0;flex:1}
+.cat-copy h3{margin:0;color:var(--navy);font-size:15px}
+.cat-copy span{display:block;margin-top:4px;color:var(--muted);font-size:11px}
+.cat-action{color:var(--cyan);font-size:11px;font-weight:900;white-space:nowrap}
+.cat:focus-visible{outline:3px solid rgba(25,182,207,.25);outline-offset:3px}
+.library-empty{grid-column:1/-1;text-align:center;padding:30px;color:var(--muted)}
+@media(max-width:650px){
+  .library-toolbar{flex-direction:column;align-items:stretch}
+  .library-toolbar input{min-width:0}
+}
+
+
+/* CAM-SST-03C — Evidencias funcionales */
+.evidence-filters{display:flex;gap:8px;align-items:center}
+.evidence-filters input{min-width:270px}
+.evidence-filters select{min-width:170px}
+.evidence-meta small{margin-top:5px}
+.evidence-actions{margin-top:9px}
+.evidence-actions button{border:1px solid var(--border);background:#fff;color:var(--navy);border-radius:9px;padding:7px 9px;font-size:10px;font-weight:800;cursor:pointer}
+.evidence-actions button:hover{background:var(--soft)}
+.empty-evidence{display:flex;flex-direction:column;gap:7px;grid-column:1/-1}
+@media(max-width:700px){.evidence-filters{width:100%;flex-direction:column;align-items:stretch}.evidence-filters input,.evidence-filters select{min-width:0;width:100%}}
+
+
+/* CAM-SST-03D — Color de tarjetas */
+.metric-card{
+  --card-accent: var(--navy);
+  --card-soft: #eef4f8;
+  position:relative;
+  overflow:hidden;
+  border-top:4px solid var(--card-accent);
+  background:linear-gradient(180deg,#fff 0%,var(--card-soft) 100%);
+}
+.metric-card::after{
+  content:"";
+  position:absolute;
+  right:-22px;
+  top:-22px;
+  width:82px;
+  height:82px;
+  border-radius:50%;
+  background:var(--card-accent);
+  opacity:.08;
+}
+.metric-card .metric-icon,
+.metric-card .metric-label,
+.metric-card strong,
+.metric-card small,
+.metric-card .metric-action{
+  position:relative;
+  z-index:1;
+}
+.metric-card .metric-icon{
+  width:34px;
+  height:34px;
+  border-radius:10px;
+  display:grid;
+  place-items:center;
+  margin-bottom:10px;
+  color:#fff;
+  background:var(--card-accent);
+  font-size:12px;
+  font-weight:900;
+}
+.metric-card:nth-child(1){--card-accent:#1f6fb2;--card-soft:#eef6fd}
+.metric-card:nth-child(2){--card-accent:#7653b8;--card-soft:#f4f0fb}
+.metric-card:nth-child(3){--card-accent:#d28b25;--card-soft:#fff7ea}
+.metric-card:nth-child(4){--card-accent:#2f8f67;--card-soft:#eef8f3}
+
+.metric-card .metric-action{
+  color:var(--card-accent);
+  font-weight:900;
+}
+
+.metric-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 26px rgba(18,59,93,.11);
+}
+.metric-card{
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+
+/* Tarjetas de categorías */
+.cat{
+  --cat-accent: var(--navy);
+  border-left:4px solid var(--cat-accent);
+  background:linear-gradient(180deg,#fff 0%,#f9fbfc 100%);
+}
+.cat:nth-child(4n+1){--cat-accent:#1f6fb2}
+.cat:nth-child(4n+2){--cat-accent:#7653b8}
+.cat:nth-child(4n+3){--cat-accent:#d28b25}
+.cat:nth-child(4n+4){--cat-accent:#2f8f67}
+.cat .cat-icon{background:var(--cat-accent)}
+.cat .cat-action{color:var(--cat-accent)}
+
+
+/* CAM-SST-03E — Estado de la evaluación */
+.latest-panel{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:14px;
+  background:linear-gradient(180deg,#fff 0%,#f7fafc 100%);
+}
+.latest-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.latest-head p{margin:0;color:var(--cyan);font-size:10px;font-weight:900;letter-spacing:.12em}
+.latest-head h2{margin:5px 0 0;color:var(--navy);font-size:20px;line-height:1.15}
+.status-badge{padding:6px 9px;border-radius:999px;font-size:10px;font-weight:900;white-space:nowrap}
+.status-badge.neutral{background:#eef2f5;color:#66727d}
+.status-badge.ok{background:#eaf7ef;color:#26784b}
+.status-badge.progress{background:#eef5fd;color:#255f96}
+.latest-empty{padding:15px 0;color:var(--muted);font-size:12px;line-height:1.45}
+.latest-data{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.latest-data>div{background:#fff;border:1px solid var(--border);border-radius:10px;padding:9px}
+.latest-data small{display:block;color:var(--muted);font-size:8px;font-weight:800}
+.latest-data strong{display:block;margin-top:3px;color:var(--navy);font-size:11px;line-height:1.25}
+.latest-actions{display:flex;gap:7px}
+.latest-actions button{flex:1;border:1px solid var(--border);background:#fff;color:var(--navy);border-radius:9px;padding:8px 10px;font-size:10px;font-weight:900;cursor:pointer}
+.latest-actions .primary{background:var(--navy);color:#fff;border-color:var(--navy)}
+@media(max-width:700px){
+  .latest-data{grid-template-columns:1fr 1fr}
+  .latest-actions{flex-direction:column}
+}
+
+
+/* CAM-SST-03G — Pulido del tablero */
+.app-shell{padding-bottom:124px}
+.hero{align-items:stretch}
+.hero-copy{padding-bottom:22px}
+.hero-status{padding:18px}
+.hero-copy h1{margin-top:4px}
+.hero-copy .lead{margin-bottom:14px}
+.hero-actions{margin-top:14px}
+.bottom-nav{min-height:62px}
+@media(max-width:720px){
+  .app-shell{padding-bottom:132px}
+  .hero-copy{padding-bottom:18px}
+  .hero-status{padding:16px}
+}
+
+
+/* CAM-SST-03H — Inicio guiado de nueva evaluación */
+.setup-card{
+  max-width:900px;
+  margin:18px auto 0;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:22px;
+  box-shadow:0 9px 24px rgba(18,59,93,.07);
+}
+.setup-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.setup-note{margin-top:16px;padding:12px 14px;border-left:4px solid var(--cyan);background:#f7fbfc;border-radius:10px}
+.setup-note strong{display:block;color:var(--navy);font-size:12px}
+.setup-note span{display:block;margin-top:4px;color:var(--muted);font-size:11px;line-height:1.45}
+.setup-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}
+.setup-actions button{border:1px solid var(--border);background:#fff;color:var(--navy);border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}
+.setup-actions .primary{background:var(--navy);color:#fff;border-color:var(--navy)}
+@media(max-width:700px){
+  .setup-grid{grid-template-columns:1fr}
+  .setup-actions{flex-direction:column}
+  .setup-actions button{width:100%}
+}
+
+
+/* CAM-SST-03I — Contexto validado */
+.context-bar{
+  display:grid;
+  grid-template-columns:1.15fr 2.1fr auto;
+  align-items:center;
+  gap:12px;
+  margin:0 0 12px;
+  padding:11px 13px;
+  background:#fff;
+  border:1px solid var(--border);
+  border-left:4px solid var(--navy);
+  border-radius:14px;
+  box-shadow:0 6px 16px rgba(18,59,93,.05);
+}
+.context-title span{display:block;color:var(--cyan);font-size:9px;font-weight:900;letter-spacing:.12em}
+.context-title strong{display:block;color:var(--navy);font-size:14px;margin-top:3px}
+.context-items{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.context-items small{display:block;color:var(--muted);font-size:8px;font-weight:800}
+.context-items b{display:block;color:var(--navy);font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:3px}
+.context-bar>button{
+  border:1px solid var(--border);
+  background:#fff;
+  color:var(--navy);
+  border-radius:9px;
+  padding:8px 10px;
+  font-size:10px;
+  font-weight:900;
+  cursor:pointer
+}
+@media(max-width:850px){
+  .context-bar{grid-template-columns:1fr}
+  .context-items{grid-template-columns:repeat(2,1fr)}
+}
+
+
+/* CAM-SST-03J — Contexto visible solo durante la evaluación */
+#currentContextBar{display:none}
+#currentContextBar.context-visible{display:grid}
+
+
+/* CAM-SST-03L — Consistencia visual de botones */
+button,
+.btn{
+  font-family:inherit;
+}
+
+.hero-actions button,
+.head-actions button,
+.status-actions button,
+.setup-actions button,
+.record-actions button,
+.evidence-actions button,
+.bottom-nav button{
+  transition:background .18s ease,border-color .18s ease,color .18s ease,transform .18s ease,box-shadow .18s ease;
+}
+
+.hero-actions .primary,
+.setup-actions .primary,
+.status-actions .primary,
+.record-actions .record-open{
+  background:var(--navy);
+  color:#fff;
+  border-color:var(--navy);
+  box-shadow:0 5px 12px rgba(18,59,93,.12);
+}
+
+.hero-actions .primary:hover,
+.setup-actions .primary:hover,
+.status-actions .primary:hover,
+.record-actions .record-open:hover{
+  background:var(--navy-2);
+  border-color:var(--navy-2);
+  transform:translateY(-1px);
+}
+
+.hero-actions button:not(.primary),
+.head-actions button,
+.status-actions button:not(.primary),
+.setup-actions button:not(.primary),
+.record-actions button:not(.record-open),
+.evidence-actions button{
+  background:#fff;
+  color:var(--navy);
+  border:1px solid var(--border);
+  border-radius:10px;
+  font-weight:800;
+}
+
+.hero-actions button:not(.primary):hover,
+.head-actions button:hover,
+.status-actions button:not(.primary):hover,
+.setup-actions button:not(.primary):hover,
+.record-actions button:not(.record-open):hover,
+.evidence-actions button:hover{
+  background:var(--soft);
+  border-color:#c6d9e3;
+  transform:translateY(-1px);
+}
+
+.hero-actions button:focus-visible,
+.head-actions button:focus-visible,
+.status-actions button:focus-visible,
+.setup-actions button:focus-visible,
+.record-actions button:focus-visible,
+.evidence-actions button:focus-visible{
+  outline:3px solid rgba(25,182,207,.22);
+  outline-offset:2px;
+}
+
+.record-actions .record-delete{
+  color:#a23a3a;
+}
+
+.hero-actions{
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.hero-actions button,
+.head-actions button,
+.status-actions button,
+.setup-actions button{
+  min-height:36px;
+}
+
+.bottom-nav button{
+  color:#6b7781;
+  border-radius:10px;
+}
+
+.bottom-nav button:hover{
+  background:#f3f7f9;
+  color:var(--navy);
+}
+
+.bottom-nav button.active{
+  background:#eef5f8;
+  color:var(--navy);
+}
+
+@media(max-width:600px){
+  .hero-actions{
+    flex-direction:column;
+    align-items:stretch;
+  }
+  .hero-actions button{
+    width:100%;
+  }
+}
+
+
+/* CAM-SST-03M — Captura en campo */
+.field-toolbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:14px;
+  margin:0 0 14px;
+  padding:13px 14px;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:14px;
+  box-shadow:0 6px 16px rgba(18,59,93,.05);
+}
+.field-progress{min-width:240px;flex:1}
+.field-progress-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.field-progress-top strong{color:var(--navy);font-size:11px;letter-spacing:.08em}
+.field-progress-top span{color:var(--muted);font-size:10px;font-weight:800}
+.field-progress-track{height:7px;background:#edf2f5;border-radius:999px;overflow:hidden;margin-top:8px}
+.field-progress-bar{height:100%;width:0;background:linear-gradient(90deg,#1f6fb2,#19b6cf);border-radius:999px;transition:width .2s ease}
+.field-tools{display:flex;align-items:center;gap:8px}
+.compact-check{display:flex;align-items:center;gap:6px;flex-direction:row;color:var(--muted);font-size:10px;white-space:nowrap}
+.compact-check input{width:auto;margin:0}
+.field-btn{
+  border:1px solid var(--border);
+  background:#fff;
+  color:var(--navy);
+  border-radius:9px;
+  padding:9px 11px;
+  font-size:10px;
+  font-weight:900;
+  cursor:pointer;
+}
+.field-btn.primary{background:var(--navy);color:#fff;border-color:var(--navy)}
+.field-btn:hover{transform:translateY(-1px)}
+.aspect.pending{border-left:4px solid #d28b25}
+.aspect.done{border-left:4px solid #2f8f67}
+.aspect .capture-state{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  margin-left:7px;
+  padding:4px 7px;
+  border-radius:999px;
+  font-size:9px;
+  font-weight:900;
+  background:#f1f4f6;
+  color:#65717a;
+}
+.aspect .capture-state.done{background:#edf8f2;color:#28794f}
+.aspect .capture-state.pending{background:#fff6e9;color:#956417}
+.aspect .aspect-head-row{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:4px;
+}
+.aspect .quick-jump{
+  margin-top:10px;
+  font-size:10px;
+  color:var(--cyan);
+  font-weight:900;
+}
+@media(max-width:720px){
+  .field-toolbar{flex-direction:column;align-items:stretch}
+  .field-progress{min-width:0}
+  .field-tools{justify-content:space-between}
+  .field-tools .field-btn{flex:1}
+}
+
+
+/* CAM-SST-03N — Resumen funcional */
+.result-card{min-height:100%}
+.summary-context{display:flex;flex-direction:column;gap:2px;margin-top:8px}
+.summary-context strong{font-size:15px;color:var(--navy)}
+.summary-context span{font-size:11px;color:var(--muted)}
+.summary-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
+.summary-kpis>div{background:#f7fafc;border:1px solid var(--border);border-radius:10px;padding:10px}
+.summary-kpis small{display:block;color:var(--muted);font-size:8px;font-weight:800}
+.summary-kpis b{display:block;margin-top:4px;color:var(--navy);font-size:18px}
+.summary-status{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:12px;padding:9px 10px;background:#eef5f8;border-radius:10px}
+.summary-status span{color:var(--muted);font-size:10px;font-weight:800}
+.summary-status strong{color:var(--navy);font-size:10px}
+@media(max-width:650px){
+  .summary-kpis{grid-template-columns:repeat(2,1fr)}
+}
+
+
+/* CAM-SST-03P — Aspectos de campo */
+.aspect-toolbar{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+  margin:0 0 12px;padding:12px 14px;background:#fff;
+  border:1px solid var(--border);border-radius:14px;
+  box-shadow:0 6px 15px rgba(18,59,93,.05)
+}
+.aspect-toolbar p{margin:0;color:var(--cyan);font-size:9px;font-weight:900;letter-spacing:.12em}
+.aspect-toolbar strong{display:block;margin-top:3px;color:var(--navy);font-size:14px}
+.aspect-toolbar span{display:block;margin-top:3px;color:var(--muted);font-size:10px}
+.aspect-legend{display:flex;gap:10px;flex-wrap:wrap}
+.aspect-legend>span{display:flex;align-items:center;gap:5px;color:var(--muted);font-size:9px;font-weight:800}
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%}
+.dot.pending{background:#d28b25}.dot.done{background:#2f8f67}
+.quick-state{display:flex;align-items:center;gap:6px;margin:10px 0 4px}
+.quick-state button{min-width:34px;border:1px solid var(--border);border-radius:8px;background:#fff;color:var(--navy);padding:6px 7px;font-size:10px;font-weight:900;cursor:pointer}
+.quick-state button:hover{background:var(--soft)}
+.quick-state button.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.quick-state .quick-hint{font-size:9px;color:var(--muted);margin-left:3px}
+@media(max-width:700px){.aspect-toolbar{flex-direction:column;align-items:stretch}}
+
+
+/* CAM-SST-03Q — Botones principales un poco más grandes */
+.hero-actions button,
+.status-actions button{
+  min-height:42px;
+  padding:11px 16px;
+  font-size:12px;
+}
+
+.hero-actions button{
+  border-radius:10px;
+}
+
+.status-actions button{
+  min-height:40px;
+  padding:10px 14px;
+}
+
+.hero-actions .primary{
+  font-size:12px;
+  letter-spacing:.01em;
+}
+
+@media(max-width:600px){
+  .hero-actions button,
+  .status-actions button{
+    min-height:44px;
+    font-size:12px;
+  }
+}
+
+
+/* CAM-SST-03R — Aspectos con mejor área táctil */
+.aspect{
+  border-radius:15px;
+  padding:16px;
+}
+.aspect .aspect-head-row h3{
+  flex:1 1 220px;
+}
+.quick-state button{
+  min-width:42px;
+  min-height:38px;
+  padding:8px 10px;
+  font-size:11px;
+}
+.photo-btn{
+  min-height:40px;
+  padding:9px 12px;
+  border-radius:10px;
+  font-size:11px;
+  font-weight:900;
+}
+.rating,
+.finding{
+  min-height:40px;
+}
+.aspect .finding{
+  line-height:1.4;
+}
+@media(max-width:700px){
+  .aspect{
+    padding:14px;
+  }
+  .aspect .aspect-head-row{
+    align-items:flex-start;
+  }
+  .aspect .aspect-head-row h3{
+    flex-basis:100%;
+    margin-top:3px;
+  }
+  .quick-state{
+    flex-wrap:wrap;
+  }
+  .quick-state button{
+    flex:1 1 0;
+    min-width:0;
+  }
+  .photo-actions{
+    flex-direction:column;
+    align-items:stretch;
+  }
+  .photo-btn{
+    width:100%;
+    justify-content:center;
+    text-align:center;
+  }
+}
+
+
+/* CAM-SST-03S — Captura de aspecto */
+.capture-strip{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin:10px 0 6px;
+  min-height:24px;
+}
+.capture-save-status{
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  padding:4px 7px;
+  border-radius:999px;
+  background:#edf8f2;
+  color:#28794f;
+  font-size:9px;
+  font-weight:900;
+}
+.capture-note{
+  color:var(--muted);
+  font-size:9px;
+}
+.aspect.done .quick-state .quick-hint{color:#28794f}
+@media(max-width:650px){
+  .capture-strip{flex-wrap:wrap}
+}
+
+
+/* CAM-SST-03T — Registros pulidos */
+.record-location{margin-top:5px;color:var(--navy);font-size:10px;font-weight:700}
+.record-meta-line{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px;color:var(--muted);font-size:9px}
+.record-status-row{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-top:8px}
+.record-status{display:inline-flex;align-items:center;border-radius:999px;padding:5px 8px;font-size:9px;font-weight:900}
+.record-status.progress{background:#eef5fd;color:#255f96}
+.record-status.ready{background:#edf8f2;color:#28794f}
+.record-progress{font-size:9px;font-weight:900;color:var(--muted)}
+@media(max-width:620px){
+  .record-meta-line{flex-direction:column;gap:2px}
+}
+
+
+/* CAM-SST-03U — Hallazgos funcionales */
+.core-chip{
+  border:0;
+  background:transparent;
+  color:inherit;
+  font:inherit;
+  padding:0;
+  cursor:pointer;
+}
+.hallazgos-chip{
+  color:#c97917;
+  font-weight:900;
+}
+.hallazgos-chip:hover{text-decoration:underline}
+.findings-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+.findings-summary article{background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px;border-top:4px solid #d28b25}
+.findings-summary small{display:block;color:var(--muted);font-size:9px;font-weight:800}
+.findings-summary b{display:block;color:var(--navy);font-size:24px;margin-top:4px}
+.findings-toolbar{display:flex;gap:10px;margin-bottom:14px}
+.findings-toolbar input{flex:1}
+.findings-toolbar select{width:190px}
+.findings-list{display:flex;flex-direction:column;gap:11px}
+.finding-card{display:grid;grid-template-columns:5px 1fr;background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 6px 16px rgba(18,59,93,.05)}
+.finding-accent{background:#d28b25}.finding-accent.nc{background:#b63c3c}
+.finding-content{padding:15px}
+.finding-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.finding-category{display:inline-block;background:#fff5e7;color:#9a6213;border:1px solid #f1d7ad;border-radius:999px;padding:4px 7px;font-size:9px;font-weight:900}
+.finding-top h3{margin:7px 0 0;color:var(--navy);font-size:15px}
+.finding-status{display:inline-flex;background:#fff5e7;color:#9a6213;border-radius:999px;padding:5px 8px;font-size:9px;font-weight:900;white-space:nowrap}
+.finding-status.nc{background:#fff0f0;color:#a63a3a}
+.finding-content p{margin:10px 0;color:#4f606c;font-size:12px;line-height:1.5}
+.finding-meta{display:flex;flex-wrap:wrap;gap:6px}
+.finding-meta span{background:var(--soft);border:1px solid #d9e7ef;color:var(--navy);border-radius:999px;padding:5px 7px;font-size:9px}
+.finding-actions{margin-top:10px}
+.finding-open{border:1px solid var(--navy);background:var(--navy);color:#fff;border-radius:9px;padding:8px 11px;font-size:10px;font-weight:900;cursor:pointer}
+.findings-empty{text-align:center;padding:30px;color:var(--muted)}
+@media(max-width:760px){
+  .findings-summary{grid-template-columns:repeat(2,1fr)}
+  .findings-toolbar{flex-direction:column}
+  .findings-toolbar select{width:100%}
+  .finding-top{flex-direction:column}
+}
+
+
+/* CAM-SST-03V — Hallazgos pulidos */
+.finding-card{
+  grid-template-columns:4px 1fr;
+  border-radius:13px;
+  box-shadow:0 5px 14px rgba(18,59,93,.045);
+}
+.finding-content{
+  padding:13px 15px;
+}
+.finding-top{
+  align-items:center;
+}
+.finding-top h3{
+  margin:5px 0 0;
+  font-size:14px;
+  line-height:1.25;
+}
+.finding-content p{
+  margin:8px 0 9px;
+  font-size:11px;
+  line-height:1.45;
+  color:#52616d;
+}
+.finding-category{
+  padding:3px 7px;
+  font-size:8px;
+}
+.finding-status{
+  padding:4px 7px;
+  font-size:8px;
+}
+.finding-meta{
+  gap:5px;
+}
+.finding-meta span{
+  padding:4px 6px;
+  font-size:8px;
+}
+.finding-actions{
+  margin-top:8px;
+}
+.finding-open{
+  padding:7px 10px;
+  font-size:9px;
+}
+.findings-summary article{
+  padding:12px 14px;
+}
+.findings-summary b{
+  font-size:22px;
+}
+@media(max-width:760px){
+  .finding-card{
+    grid-template-columns:4px 1fr;
+  }
+  .finding-top h3{
+    font-size:13px;
+  }
+  .finding-content p{
+    font-size:10px;
+  }
+}
+
+
+/* CAM-SST-03W — Seguimiento funcional */
+.seguimiento-chip{color:#2f8f67;font-weight:900}
+.seguimiento-chip:hover{text-decoration:underline}
+.follow-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+.follow-summary article{background:#fff;border:1px solid var(--border);border-radius:14px;padding:13px;border-top:4px solid #2f8f67}
+.follow-summary small{display:block;color:var(--muted);font-size:9px;font-weight:800}
+.follow-summary b{display:block;color:var(--navy);font-size:23px;margin-top:4px}
+.follow-toolbar{display:flex;gap:10px;margin-bottom:14px}
+.follow-toolbar input{flex:1}
+.follow-toolbar select{width:210px}
+.follow-list{display:flex;flex-direction:column;gap:11px}
+.follow-card{display:grid;grid-template-columns:4px 1fr;background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 5px 14px rgba(18,59,93,.045)}
+.follow-accent{background:#d28b25}.follow-accent.progress{background:#2f6fa5}.follow-accent.done{background:#2f8f67}
+.follow-content{padding:14px 15px}
+.follow-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.follow-category{display:inline-block;background:#edf8f3;color:#2f8f67;border:1px solid #cfe8dc;border-radius:999px;padding:4px 7px;font-size:8px;font-weight:900}
+.follow-top h3{margin:6px 0 0;color:var(--navy);font-size:14px;line-height:1.3}
+.follow-status{display:inline-flex;border-radius:999px;padding:5px 8px;font-size:8px;font-weight:900;white-space:nowrap;background:#fff6e9;color:#956417}
+.follow-status.progress{background:#eef5fd;color:#255f96}
+.follow-status.done{background:#edf8f2;color:#28794f}
+.follow-context{display:flex;flex-wrap:wrap;gap:5px;margin:9px 0}
+.follow-context span{background:var(--soft);border:1px solid #d9e7ef;color:var(--navy);border-radius:999px;padding:4px 6px;font-size:8px}
+.follow-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.follow-grid>div{background:#f8fafb;border:1px solid var(--border);border-radius:9px;padding:8px}
+.follow-grid small{display:block;color:var(--muted);font-size:8px;font-weight:800}
+.follow-grid b{display:block;color:var(--navy);font-size:10px;margin-top:3px;line-height:1.3}
+.follow-open{margin-top:9px;border:1px solid var(--navy);background:var(--navy);color:#fff;border-radius:9px;padding:7px 10px;font-size:9px;font-weight:900;cursor:pointer}
+.follow-empty{padding:30px;text-align:center;color:var(--muted);display:flex;flex-direction:column;gap:7px}
+@media(max-width:760px){
+  .follow-summary{grid-template-columns:repeat(2,1fr)}
+  .follow-toolbar{flex-direction:column}
+  .follow-toolbar select{width:100%}
+  .follow-top{flex-direction:column}
+}
+
+
+/* CAM-SST-04A — Acción desde hallazgo */
+.sst-action-toggle{margin-top:10px}
+.sst-toggle{background:#f4f8fa;border:1px solid var(--border);color:var(--navy);border-radius:9px;padding:8px 11px;font-size:10px;font-weight:900;cursor:pointer}
+.sst-action-panel{margin-top:9px;padding:12px;border:1px solid #d8e6ed;border-radius:12px;background:#f8fbfc}
+.sst-action-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.sst-action-grid label{font-size:10px}
+.sst-action-grid textarea{resize:vertical}
+@media(max-width:700px){.sst-action-grid{grid-template-columns:1fr}}
+
+
+/* CAM-SST-04B — Gestión SST visible */
+.sst-action-toggle{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.sst-toggle.attention{
+  background:#fff7ea;
+  border-color:#edc98c;
+  color:#9a6213;
+}
+.sst-attention-note{
+  color:#9a6213;
+  font-size:9px;
+  font-weight:800;
+}
+
+
+/* CAM-SST-04C — Estado de seguimiento */
+.follow-status{
+  min-height:40px;
+}
+
+
+/* CAM-SST-04D — Estado de seguimiento visible */
+.follow-grid>div:nth-child(3){
+  border-left:3px solid #2f8f67;
+}
+
+
+/* CAM-SST-05A — Roles y flujo */
+.roles-chip{color:#7653b8;font-weight:900}
+.roles-chip:hover{text-decoration:underline}
+.role-note{
+  margin:16px 0 13px;padding:11px 13px;border-left:4px solid #7653b8;
+  background:#faf8ff;border-radius:10px;color:#5c546e
+}
+.role-note strong{display:block;color:#5b438f;font-size:11px}
+.role-note span{display:block;margin-top:3px;font-size:10px;line-height:1.45}
+.role-tabs{display:flex;gap:7px;margin:0 0 14px}
+.role-tab{
+  border:1px solid var(--border);background:#fff;color:var(--navy);
+  border-radius:10px;padding:10px 13px;font-size:10px;font-weight:900;cursor:pointer
+}
+.role-tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.role-panel{display:none}.role-panel.active{display:block}
+.role-hero{
+  background:linear-gradient(135deg,#eef6fd,#fff);
+  border:1px solid #dbe7ee;border-radius:16px;padding:18px;
+  display:flex;justify-content:space-between;align-items:center;gap:15px
+}
+.role-hero.manager{background:linear-gradient(135deg,#f4effb,#fff);border-color:#e2d7f2}
+.role-hero p{margin:0;color:var(--cyan);font-size:9px;font-weight:900;letter-spacing:.12em}
+.role-hero h2{margin:4px 0;color:var(--navy);font-size:21px}
+.role-hero span{color:var(--muted);font-size:11px;line-height:1.45}
+.role-flow{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:7px}
+.role-flow span{
+  padding:6px 8px;border-radius:999px;background:#fff;border:1px solid var(--border);
+  color:var(--navy);font-size:9px;font-weight:900;white-space:nowrap
+}
+.role-flow i{font-style:normal;color:#8a9aa6;font-weight:900}
+.role-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:13px}
+.role-grid article{
+  background:#fff;border:1px solid var(--border);border-radius:13px;padding:14px
+}
+.role-grid article>strong{
+  width:25px;height:25px;border-radius:8px;background:var(--navy);color:#fff;
+  display:grid;place-items:center;font-size:10px
+}
+.role-grid h3{margin:9px 0 4px;color:var(--navy);font-size:13px}
+.role-grid p{margin:0;color:var(--muted);font-size:10px;line-height:1.45}
+.role-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:13px}
+.role-metrics>div{
+  background:#fff;border:1px solid var(--border);border-radius:11px;padding:10px;
+}
+.role-metrics small{display:block;color:var(--muted);font-size:8px;font-weight:800}
+.role-metrics b{display:block;margin-top:4px;color:var(--navy);font-size:20px}
+@media(max-width:800px){
+  .role-hero{flex-direction:column;align-items:stretch}
+  .role-grid,.role-metrics{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:520px){
+  .role-tabs{flex-direction:column}
+  .role-tab{width:100%}
+  .role-grid,.role-metrics{grid-template-columns:1fr}
+}
+
+
+/* CAM-SST-05B — Verificación y cierre */
+.verification-block{
+  grid-column:1/-1;
+  margin-top:4px;
+  padding:11px;
+  border:1px dashed #cfdde4;
+  border-radius:11px;
+  background:#fbfcfd;
+}
+.verification-block.verification-ready{
+  border-color:#b9dfc7;
+  background:#f5fbf7;
+}
+.verification-title strong{display:block;color:var(--navy);font-size:10px}
+.verification-title span{display:block;margin-top:3px;color:var(--muted);font-size:8px;line-height:1.4}
+.verification-grid{display:grid;grid-template-columns:1fr 2fr;gap:9px;margin-top:9px}
+.verification-actions{display:flex;align-items:center;gap:8px;margin-top:8px}
+.verification-count{color:var(--muted);font-size:9px;font-weight:800}
+.follow-verification{font-weight:900}
+.follow-verification.verified{color:#28794f}
+.follow-verification.closed{color:#4f5d68}
+@media(max-width:700px){
+  .verification-grid{grid-template-columns:1fr}
+  .verification-actions{flex-direction:column;align-items:stretch}
+}
+.report-btn{border:1px solid #123b5d;background:#fff;color:#123b5d;font-weight:700}
+.report-btn:hover{background:#eef5f8}
+.report-btn:disabled{opacity:.65;cursor:wait}
