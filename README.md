@@ -406,3 +406,10 @@ CAM-SST-06C abandona la dependencia de la plantilla de ejecución liviana. El re
 
 ### CAM-SST-06B · Corrección 02
 Se corrigió la expansión de la tabla de aspectos: la plantilla maestra contiene filas de ejemplo y el generador ahora las duplica hasta cubrir todos los aspectos reales antes de rellenarlos. También se reforzaron las validaciones de la plantilla gráfica de fotografías y de las relaciones XML para producir errores más precisos.
+
+
+## CAM-SST-06C-IDENTIDAD-01 — Identificador para celular y tablet
+- Se incorpora el identificador visual proporcionado para Gestión de Riesgos en la cabecera.
+- Se añaden iconos de 192×192 y 512×512 y `manifest.json` para facilitar la instalación como acceso directo/app web compatible.
+- Se conserva la lógica de la aplicación; los cambios se limitan a identidad visual y metadatos.
+- Para que el icono aparezca en la pantalla de inicio del dispositivo, abre el sitio publicado en el navegador y usa “Añadir a pantalla de inicio” o “Instalar aplicación”, si el navegador ofrece esa opción.

@@ -1,0 +1,15 @@
+<!doctype html><html><body><pre id=out>starting</pre>
+<script src="vendor/jszip.min.js"></script>
+<script type="module">
+import {ASPECTS} from './data/aspects.js';
+import {generateHseqWordReport} from './reportGenerator.js';
+const out=document.querySelector('#out'); HTMLAnchorElement.prototype.click=function(){};
+window.__camSstGetPhoto=async()=>null;
+const evaluation={id:'TEST-001',context:{cliente:'EMPRESA PRUEBA',sede:'SEDE 1',lugar:'PORTERIA',tipoEvaluacion:'Inspección HSEQ general',fecha:'2026-10-08',inspector:'Inspector Prueba',director:'Responsable Cliente',servicio:'Vigilancia',modalidad:'Turno 12 horas',expuestos:'2',obs:'Prueba'},general:'Prueba de generación',aspects:{}};
+for(const a of ASPECTS){evaluation.aspects[a.id]={rating:'C',finding:'',preliminaryAction:'',responsible:'',dueDate:'',actionStatus:'Pendiente',photos:[],followUp:{status:'Pendiente',result:'',verificationDate:'',verificationResult:'',verificationEvidence:[]}};}
+evaluation.aspects[3].rating='NC'; evaluation.aspects[3].finding='Hallazgo de prueba'; evaluation.aspects[3].actionStatus='En proceso'; evaluation.aspects[3].preliminaryAction='Acción de prueba'; evaluation.aspects[3].responsible='Responsable'; evaluation.aspects[3].dueDate='2026-10-10';
+try{
+  const r=await generateHseqWordReport({evaluation,aspects:ASPECTS});
+  out.textContent='OK '+r.filename+' '+r.blob.size;
+}catch(e){out.textContent='ERROR '+(e?.stack||e); console.error(e);}
+</script></body></html>

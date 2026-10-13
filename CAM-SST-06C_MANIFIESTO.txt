@@ -1,0 +1,14 @@
+TECCHNEX CAM-SST 06C — FOTOGRAFÍAS EN CELDA FIJA
+
+Estrategia: Informe primero; Word recipiente.
+Intervención CAM-SST-06C-FOTO-03.
+
+Objetivo:
+- Evitar depender del tamaño CSS interpretado por Word/MHTML.
+- Redimensionar físicamente cada fotografía antes de incorporarla.
+- Colocar cada fotografía dentro de una tabla/celda de evidencia con dimensión fija.
+
+Tamaño físico de imagen de ejecución: 90 x 60 px (~2.4 x 1.6 cm a 96 dpi).
+Celda contenedora: 2.7 x 1.9 cm.
+
+No se modifica CAM-SST-05B ni la plantilla maestra aprobada.

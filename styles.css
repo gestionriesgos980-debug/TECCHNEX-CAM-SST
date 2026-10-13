@@ -930,3 +930,80 @@ button,
 .report-btn{border:1px solid #123b5d;background:#fff;color:#123b5d;font-weight:700}
 .report-btn:hover{background:#eef5f8}
 .report-btn:disabled{opacity:.65;cursor:wait}
+
+
+/* CAM-SST-06C-RWD-01 — Ajuste quirúrgico del tablero para celular y tablet.
+   Se conserva la estructura y las funciones; solo cambia la distribución adaptable. */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1.35fr) minmax(220px, .85fr); gap: 12px; }
+  .hero > div, .hero-card { padding: 16px; min-width: 0; }
+  .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .metrics > div { min-width: 0; padding: 14px; }
+  .cols { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .cols > article { min-width: 0; padding: 16px; overflow-wrap: anywhere; }
+  .actions { flex-wrap: wrap; }
+  .actions button { flex: 1 1 145px; min-width: 0; }
+}
+
+@media (max-width: 640px) {
+  body { padding: 10px; }
+  .head { flex-direction: column; align-items: stretch; gap: 10px; }
+  .head-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; }
+  .head-actions button { width: 100%; min-width: 0; }
+  .hero { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .hero > div, .hero-card { padding: 14px; border-radius: 14px; }
+  .hero h1 { font-size: clamp(25px, 7vw, 34px); line-height: 1.08; overflow-wrap: anywhere; }
+  .hero .actions { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .hero .actions button { width: 100%; min-height: 42px; }
+  .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 10px 0; }
+  .metrics > div { padding: 11px; border-radius: 13px; }
+  .metric-card { min-height: 112px; }
+  .metric-top { gap: 6px; align-items: flex-start; }
+  .metric-top small, .metrics small { font-size: 10px; line-height: 1.25; overflow-wrap: anywhere; }
+  .metric-card b, .metrics b { font-size: clamp(22px, 7vw, 28px); margin-top: 7px; }
+  .cols { grid-template-columns: minmax(0, 1fr); gap: 10px; margin-top: 10px; }
+  .cols > article { padding: 14px; border-radius: 14px; }
+  .cols h2, .cols h3 { overflow-wrap: anywhere; }
+  button, input, select, textarea { max-width: 100%; }
+}
+
+@media (max-width: 360px) {
+  body { padding: 7px; }
+  .metrics { gap: 6px; }
+  .metrics > div { padding: 9px; }
+  .head-actions { grid-template-columns: minmax(0, 1fr); }
+}
+
+
+/* CAM-SST-06C-IDENTIDAD-01 — Identificador visual para escritorio, celular y tablet. */
+.brand-logo{
+  display:block;
+  width:44px;
+  height:44px;
+  flex:0 0 44px;
+  object-fit:contain;
+  border-radius:10px;
+  background:#fff;
+}
+.brand-button{
+  border:0;
+  padding:0;
+  background:transparent;
+  cursor:pointer;
+  text-align:left;
+}
+@media(max-width:640px){
+  .top{
+    padding:8px 10px;
+    gap:8px;
+    align-items:center;
+  }
+  .brand-logo{
+    width:38px;
+    height:38px;
+    flex-basis:38px;
+  }
+  .brand b{font-size:12px}
+  .brand small{font-size:8px;letter-spacing:0}
+  .badge{font-size:9px;text-align:right;max-width:42%}
+}
